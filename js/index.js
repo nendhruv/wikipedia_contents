@@ -9,9 +9,11 @@ export default class Content {
     updateContent() {
         this.form.addEventListener('submit', (event) => {
             event.preventDefault();
+            document.querySelector('.title-content__wiki').innerText = 'Loading ... ';
             const language = document.querySelector('.language__wiki').value;
             const title = document.querySelector('.title__wiki').value;
-            new Service(language, title);
+            const service  = new Service(language, title);
+            service.fetchData();
         });
     }
 }
