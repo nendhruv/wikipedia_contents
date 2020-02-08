@@ -1,6 +1,6 @@
 export default class Service {
-    constructor() {
-        this.baseUrl = 'https://en.wikipedia.org/api/rest_v1/page/metadata'
+    constructor(language, title) {
+        this.baseUrl = `https://${language}.wikipedia.org/api/rest_v1/page/metadata/${title}`
         this.fetchData();
     }
 
@@ -21,7 +21,7 @@ export default class Service {
             }
         };
 
-        request.open("GET", `${this.baseUrl}/Douglas_Adams`, true);
+        request.open("GET", `${this.baseUrl}`, true);
         request.send();
     }
 }

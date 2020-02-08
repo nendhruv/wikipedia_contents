@@ -1,3 +1,3 @@
-import Service from './service.js';
+import Content from './index.js';
 
-new Service();
+new Content();
