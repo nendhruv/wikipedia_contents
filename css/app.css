@@ -1,0 +1,21 @@
+.content-box__wiki {
+    margin: 10%;
+    padding: 2%;
+    border: 1px solid;
+}
+
+.rtl__wiki {
+    direction: rtl;
+}
+
+.ltr__wiki {
+    direction: ltr;
+}
+
+.level_2{
+    margin: 0 15px; 
+}
+
+.level_3{
+    margin: 0 30px; 
+}
