@@ -1,0 +1,47 @@
+.content-box__wiki {
+    border: 1px solid;
+}
+
+.box {
+    margin: 5% 10%;
+    padding: 2%;
+    width: 35%;
+}
+
+.rtl__wiki {
+    direction: rtl;
+}
+
+.ltr__wiki {
+    direction: ltr;
+}
+
+.level_2{
+    margin: 0 15px; 
+}
+
+.level_3{
+    margin: 0 30px; 
+}
+
+.content-form__wiki {
+    margin: 5% 10%;
+    width: 60%;
+    font-size: 24px;
+}
+
+input,
+select,
+button {
+    height: 24px;
+    width: 200px;
+    border: 1px solid;
+}
+
+@media (max-width: 768px) {
+    .content-form__wiki,
+    .box  {
+        width: 90%;
+        margin: 10% 5%
+    }
+}

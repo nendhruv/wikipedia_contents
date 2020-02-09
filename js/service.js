@@ -42,8 +42,9 @@ export default class Service {
                 entry.setAttribute('class', `level_${element.level}`)
                 entryLink.appendChild(entry);
 
-                document.querySelector('.title-content__wiki').appendChild(entryLink);
+                document.querySelector('.title-index-content__wiki').appendChild(entryLink);
             });
+            document.querySelector('.box').classList.add('content-box__wiki');
         }
     }
 }

@@ -3,8 +3,8 @@
 
 <head>
     <meta charset="utf-8">
-
     <title>Wikipedia Contents</title>
+    <link href="css/app.css" rel="stylesheet"/>
 </head>
 
 <body>
@@ -12,26 +12,29 @@
         <form class="content-form__wiki">
             <label>Article Title (Use uderscore instead of spaces)</label>
             <input class="title__wiki" type="text" />
+            <br>
             <label>Language</label>
             <select class="language__wiki">
                 <option value="en">English</option>
                 <option value="hi">हिंदी - Hindi</option>
-                <option value="ur">اردو - Urdu</option>
+                <option class="rtl__wiki" value="ur">اردو - Urdu</option>
                 <option value="mr">मराठी - Marathi</option>
                 <option value="ta">தமிழ் - Tamil</option>
                 <option value="fr">français - French</option>
                 <option value="es">español - Spanish</option>
                 <option value="ko">한국어 - Korean</option>
-                <option value="ar">عربى - Arabic</option>
+                <option class="rtl__wiki" value="ar">عربى - Arabic</option>
                 <option value="bn">বাংলা - Bangla</option>
             </select>
+            <br>
             <button type="submit">Fetch</button>
         </form>
-
-        <div class="title-content__wiki"></div>
-        <div class="title-index-content__wiki"></div>
     </div>
 
+    <div class="box">
+        <h5 class="title-content__wiki"></h5>
+        <div class="title-index-content__wiki"></div>
+    </div>
 <script type="module" src="js/app.js"></script>
 </body>
 
