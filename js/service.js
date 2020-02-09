@@ -7,21 +7,26 @@ export default class Service {
     }
 
     fetchData() {
-        const request = new XMLHttpRequest();
+        if (this.title){
+            const request = new XMLHttpRequest();
 
-        request.onreadystatechange = () => {
-            if (request.readyState === XMLHttpRequest.DONE) {
-                if (request.status === 200) {
-                    this.showData(JSON.parse(request.response), null);
+            request.onreadystatechange = () => {
+                if (request.readyState === XMLHttpRequest.DONE) {
+                    if (request.status === 200) {
+                        this.showData(JSON.parse(request.response), null);
+                    }
+                    else {
+                        this.showData(null, 'There is no article for this topic on Wikipedia');
+                    }
                 }
-                else {
-                    this.showData(null, 'There is no article for this topic on Wikipedia');
-                }
-            }
-        };
+            };
 
-        request.open("GET", `${this.baseUrl}`, true);
-        request.send();
+            request.open("GET", `${this.baseUrl}`, true);
+            request.send();
+        }
+        else {
+            document.querySelector('.title-content__wiki').innerText = 'Please enter a page title';
+        }
     }
 
     showData(data, error) {
