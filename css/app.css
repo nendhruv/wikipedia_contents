@@ -17,11 +17,11 @@
 }
 
 .level_2{
-    margin: 0 15px; 
+    margin: 0 5%; 
 }
 
 .level_3{
-    margin: 0 30px; 
+    margin: 0 10%; 
 }
 
 .content-form__wiki {
@@ -38,10 +38,19 @@ button {
     border: 1px solid;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1008px) {
     .content-form__wiki,
     .box  {
         width: 90%;
-        margin: 10% 5%
+        margin: 10% 5%;
+        font-size: 45px;
+    }
+
+    input,
+    select,
+    button {
+        height: 45px;
+        width: 250px;
+        font-size: 30px;
     }
 }
