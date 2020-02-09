@@ -44,6 +44,7 @@ export default class Service {
 
                 document.querySelector('.title-index-content__wiki').appendChild(entryLink);
             });
+            document.querySelector('.box').classList.add('content-box__wiki');
         }
     }
 }

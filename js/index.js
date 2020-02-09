@@ -16,12 +16,12 @@ export default class Content {
             const service  = new Service(language, title);
             service.fetchData();
             if (language === 'ar' || language === 'ur') {
-                document.querySelector('.content-box__wiki').classList.add('rtl__wiki');
-                document.querySelector('.content-box__wiki').classList.remove('ltr__wiki');
+                document.querySelector('.box').classList.add('rtl__wiki');
+                document.querySelector('.box').classList.remove('ltr__wiki');
             }
             else {
-                document.querySelector('.content-box__wiki').classList.add('ltr__wiki');
-                document.querySelector('.content-box__wiki').classList.add('rtl__wiki');
+                document.querySelector('.box').classList.add('ltr__wiki');
+                document.querySelector('.box').classList.add('rtl__wiki');
             }
         });
     }
